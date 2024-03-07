@@ -673,9 +673,9 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
 			HAL_GPIO_WritePin(MOTOR_GPIO_Port, MOTOR_Pin, GPIO_PIN_SET);
 			HAL_GPIO_WritePin(AUX_GPIO_Port, AUX_Pin, GPIO_PIN_SET);
 			motor = true;
-			vibrar = true;
 			
 			
+
 
 		}
 	}
