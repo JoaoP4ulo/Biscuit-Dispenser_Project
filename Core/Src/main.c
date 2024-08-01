@@ -47,7 +47,7 @@
 #define QTD_MEDIA 100
 
 #define BLOCOCALIBRACAO	1000.0
-#define AJUSTEVIBRACAO 15 // mudei Valor 13950
+#define AJUSTEVIBRACAO 50 //mudei Valor 13950 - 15
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -443,7 +443,7 @@ int main(void)
 								__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_1, 0);
 								__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_2, 0);
 								__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_3, 0);
-								HAL_Delay(500);
+								HAL_Delay(100); //500
 
 								if(potencia2>0)	{
 									__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_2, round(AJUSTEVIBRACAO * (potencia2/100)));
@@ -478,7 +478,7 @@ int main(void)
 											__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_1, 0);
 											__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_2, 0);
 											__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_3, 0);
-											HAL_Delay(300);
+											HAL_Delay(100); // mudei 300
 											if(potencia1>0)	{
 												__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_1, round(AJUSTEVIBRACAO * (potencia1/100)));
 											}
@@ -496,7 +496,7 @@ int main(void)
 													__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_1, 0);
 													__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_2, 0);
 													__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_3, 0);
-													HAL_Delay(1000); // mudei 300
+													HAL_Delay(100); // mudei 300
 													if(potencia2>0)	{
 														__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_2, round(AJUSTEVIBRACAO * (potencia2/100)));
 													}
